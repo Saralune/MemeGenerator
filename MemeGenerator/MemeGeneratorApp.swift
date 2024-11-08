@@ -11,7 +11,7 @@ import SwiftUI
 struct MemeGeneratorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          ContentView(text: "", isTextOn: true, isShadowOn: true, sliderValue: 0, selectedColor: Color.white)
         }
     }
 }
