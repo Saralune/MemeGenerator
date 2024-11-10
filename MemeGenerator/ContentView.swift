@@ -72,14 +72,14 @@ struct ContentView: View {
                 .onTapGesture {
                   selectedImage = img
                   image = UIImage()
+                }.overlay(alignment: .topTrailing){
+                  // Icône d'image sélectionnée
+                  Image(systemName: selectedImage == img ? "checkmark.circle.fill" : "")
+                    .foregroundStyle(.white)
+                    .font(.system(size: 25))
+                    .shadow(color: .black, radius: 2, x: 0, y: 2)
                 }
-              
-              // Icône d'image sélectionnée
-              Image(systemName: selectedImage == img ? "checkmark.circle.fill" : "")
-                .foregroundStyle(.white)
-                .font(.system(size: 25))
-                .offset(x: 80, y: -80)
-                .shadow(color: .black, radius: 2, x: 0, y: 2)
+                .padding()
             }
           }
         }
